@@ -1,0 +1,9 @@
+---
+- hosts: VDA-Machines
+  roles:
+    - vda
+
+- hosts: DDC
+  gather_facts: no
+  roles:
+    - catalog-dg
