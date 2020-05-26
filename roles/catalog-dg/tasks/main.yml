@@ -1,0 +1,11 @@
+---
+- name: catalog-dgroup
+
+  script: mcatalog.ps1
+  args:
+    creates: C:\Logs\done-hydrate.txt
+  environment:
+    vdaname: "{{ hostvars[groups['VDA-Machines'][0]] }}"
+    cvad_machinecatalog: "{{ cvad_machinecatalog }}"
+    cvad_deliverygroup: "{{ cvad_deliverygroup }}"
+    cvad_desktop: "{{ cvad_desktop }}"
