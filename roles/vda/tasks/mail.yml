@@ -19,13 +19,13 @@
     state: directory
 - name: To copy the data to remote location
   win_copy:
-   src: '\\192.168.1.83\vda\VDAServerSetup_7_15_4000.exe'
-   dest: C:\Temp\
+   src: '\\usohctxddc001\XenApp_and_XenDesktop_7_15_4000\VDAServerSetup_7_15_4000.exe'
+   dest: C:\temp\
    remote_src: True
 
 - name: Install VDA Components
   win_package:
-    path: C:\Temp\VDAServerSetup_7_15_4000.exe
+    path: C:\temp\VDAServerSetup_7_15_4000.exe
     arguments: /quiet /optimize /components vda /controllers "CTXDDC-001.HYD.COM,CTXDDC-002.HYD.COM" /enable_remote_assistance /enable_hdx_ports /enable_real_time_transport /virtualmachine /noreboot /noresume /logpath 'C:\Logs' /masterimage
     state: present
     expected_return_code: [0, 3, 3010]
