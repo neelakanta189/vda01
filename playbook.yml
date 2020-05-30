@@ -1,4 +1,4 @@
 ---
-- hosts: VDA-Machines
+- hosts: VDA Machines
   roles:
     - vda
