@@ -2,12 +2,12 @@
 - hosts: vda
   gather_facts: false
   - name: Install VDA Pre-Reqs
-   win_feature:
-    name:
-    - NET-Framework-45-Core
-    - Telnet-Client
-    - RDS-RD-Server
-    - Remote-Assistance
+    win_feature:
+     name:
+     - NET-Framework-45-Core
+     - Telnet-Client
+     - RDS-RD-Server
+     - Remote-Assistance
     state: present
   register: win_feature
 
