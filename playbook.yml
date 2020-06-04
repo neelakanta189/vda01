@@ -14,7 +14,7 @@
 
   - name: Reboot if features require
     win_reboot:
-     when: win_feature.reboot_required
+    when: win_feature.reboot_required
 
   - name: Create Log Folder
     win_file:
