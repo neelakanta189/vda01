@@ -4,6 +4,6 @@
   tasks:
     - name: To copy the data to remote location
       win_copy:
-       src: '\\usohctxddc001\XenApp_and_XenDesktop_7_15_4000\VDAServerSetup_7_15_4000.exe'
+       src: '\\usohctxtstx801\Source\VDAServerSetup_7_15_5000.exe'
        dest: C:\temp\
        remote_src: True
