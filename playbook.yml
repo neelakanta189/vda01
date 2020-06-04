@@ -1,4 +1,6 @@
 ---
 - hosts: vda
-  roles:
-    - vda
+  gather_facts: false
+  tasks:
+    - win_ping:
+    - win_ping:
