@@ -19,14 +19,14 @@
     state: directory
 - name: To copy the data to remote location
   win_copy:
-   src: '\\usohctxddc001\XenApp_and_XenDesktop_7_15_4000\VDAServerSetup_7_15_4000.exe'
+   src: '\\usohctxtstx801\Source\VDAServerSetup_7_15_5000.exe'
    dest: C:\temp\
    remote_src: True
 
 - name: Install VDA Components
   win_package:
-    path: C:\temp\VDAServerSetup_7_15_4000.exe
-    arguments: /quiet /optimize /components vda /controllers "CTXDDC-001.HYD.COM,CTXDDC-002.HYD.COM" /enable_remote_assistance /enable_hdx_ports /enable_real_time_transport /virtualmachine /noreboot /noresume /logpath 'C:\Logs' /masterimage
+    path: C:\temp\VDAServerSetup_7_15_5000.exe
+    arguments: /quiet /optimize /components vda /controllers "USOHCTXDDC001.aws.baxter.com,USOHCTXDDC002.aws.baxter.com" /enable_remote_assistance /enable_hdx_ports /enable_real_time_transport /virtualmachine /noreboot /noresume /logpath 'C:\Logs' /masterimage
     state: present
     expected_return_code: [0, 3, 3010]
     creates_service: BrokerAgent
@@ -38,7 +38,7 @@
 
 - name: Resume VDA Install
   win_package:
-    path: C:\ProgramData\Citrix\XenApp_Setup\VDAServerSetup_7_15_4000.exe
+    path: C:\ProgramData\Citrix\XenApp_Setup\VDAServerSetup_7_15_5000.exe
     state: present
     expected_return_code: [0, 3, 3010]
     creates_service: BrokerAgent
