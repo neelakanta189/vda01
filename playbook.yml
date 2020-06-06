@@ -7,8 +7,3 @@
        src: '\\usohctxtstx801\Source\VDAServerSetup_7_15_5000.exe'
        dest: C:\temp\
        remote_src: True
-    - name: Restart a service
-      win_service:
-       name: MpsSvc
-       state: stopped
-       start_mode: disabled
