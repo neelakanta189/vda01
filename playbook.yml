@@ -1,9 +1,4 @@
 ---
 - hosts: vda
   gather_facts: false
-  tasks:
-    - name: To copy the data to remote location
-      win_copy:
-       src: '\\usohctxtstx801\Source\VDAServerSetup_7_15_5000.exe'
-       dest: C:\temp\
-       remote_src: True
+  roles: vda
